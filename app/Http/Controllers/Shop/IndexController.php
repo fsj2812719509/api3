@@ -13,7 +13,6 @@ class IndexController extends Controller
         //跨域
         header("Access-Control-Allow-origin:*");
         $data = \DB::table('1810shop_goods')->get();
-        var_dump($data);exit;
         $data = [
             "code"=>0,
             "msg"=>"select success",
