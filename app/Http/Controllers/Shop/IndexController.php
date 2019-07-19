@@ -10,8 +10,9 @@ class IndexController extends Controller
 {
     //
     public function index(){
+        echo '1';
         //跨域
-        header("Access-Control-Allow-origin:*");
+        /*header("Access-Control-Allow-origin:*");
         $data = \DB::table('1810shop_goods')->get();
 //        var_dump($data);exit;
         $data = [
@@ -19,6 +20,6 @@ class IndexController extends Controller
             "msg"=>"select success",
             "data"=>$data
         ];
-        return json_encode($data,JSON_UNESCAPED_UNICODE);
+        return json_encode($data,JSON_UNESCAPED_UNICODE);*/
     }
 }
