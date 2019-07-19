@@ -40,7 +40,7 @@ class LoginApiController extends Controller
         $where1 = ['username'=>$name];
         $where2 = ['tel'=>$name];
         $where3 = ['email'=>$name];
-        $res = UserModel::where($where2)->orWhere($where2)->orWhere($where3)->first();
+        $res = UserModel::where($where1)->orWhere($where2)->orWhere($where3)->first();
         var_dump($res);exit;
 
         //获取用户的密码
