@@ -10,7 +10,7 @@ class IndexController extends Controller
 {
     //
     public function index(){
-        echo '1';
+        return '1';
         //跨域
         /*header("Access-Control-Allow-origin:*");
         $data = \DB::table('1810shop_goods')->get();
