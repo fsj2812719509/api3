@@ -62,6 +62,9 @@ class CartController extends Controller
 
     //购物车列表
     public function cart(){
-        echo '1';
+        //跨域
+        header("Access-Control-Allow-origin:*");
+
+        echo '1';exit;
     }
 }
