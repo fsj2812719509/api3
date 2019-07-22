@@ -66,7 +66,13 @@ class CartController extends Controller
         header("Access-Control-Allow-origin:*");
 
         //查询购物车
-        $res = CartModel::all();
-        var_dump($res);
+        $data = CartModel::all();
+
+        $data = [
+            "code"=>0,
+            "msg"=>"select success",
+            "data"=>$data
+        ];
+        return json_encode($data,JSON_UNESCAPED_UNICODE);
     }
 }
