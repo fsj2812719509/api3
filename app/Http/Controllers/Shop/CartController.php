@@ -65,6 +65,8 @@ class CartController extends Controller
         //跨域
         header("Access-Control-Allow-origin:*");
 
-        echo '1';exit;
+        //查询购物车
+        $res = CartModel::all();
+        var_dump($res);
     }
 }
