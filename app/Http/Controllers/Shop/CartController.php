@@ -45,6 +45,7 @@ class CartController extends Controller
             //购物车中有数据
             $number = $res3['number'];
             $number = $number + 1;
+            var_dump($number);exit;
 
             $data = [
                 'number'=>$number
