@@ -12,7 +12,11 @@ use App\Http\Controllers\Controller;
     public function cartDo(Request $request){
 
         //跨域
-        header("Access-Control-Allow-origin:*");
+    header('Access-Control-Allow-Origin:*');  //支持全域名访问，不安全，部署后需要固定限制为客户端网址
+
+    header('Access-Control-Allow-Methods:POST,GET,OPTIONS,DELETE'); //支持的http 动作
+
+    header('Access-Control-Allow-Headers:x-requested-with,content-type');  //响应头 请按照自己需求添加。
         echo '1';exit;
 
 
