@@ -44,14 +44,8 @@ class CartController extends Controller
         if($res3){
             //购物车中有数据
             $number = $res3['number'];
-            $number = $number + 1;
-            var_dump($number);exit;
-
-            $data = [
-                'number'=>$number
-            ];
-
-            $res4 = CartModel::where($where)->update($data);
+            $number2 = $number + 1;
+            $res4 = CartModel::where($where)->update(['number'=>$number2]);
             var_dump($res4);
         }else{
             //加入购物车
