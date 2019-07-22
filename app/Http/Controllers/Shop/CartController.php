@@ -58,4 +58,10 @@ class CartController extends Controller
         }
 
     }
+
+
+    //购物车列表
+    public function cart(){
+        echo '1';
+    }
 }

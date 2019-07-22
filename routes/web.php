@@ -34,3 +34,5 @@ Route::get('/shopindex','Shop\IndexController@index');//商品展示
 Route::post('/particulars','Shop\ParticularsController@particulars');//商品详情
 
 Route::post('/cartDo','Shop\CartController@cartDo');//加入购物车
+
+Route::post('/cart','Shop\CartController@cart');//加入购物车
