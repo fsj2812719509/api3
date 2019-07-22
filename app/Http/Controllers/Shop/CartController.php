@@ -13,7 +13,7 @@ use App\Http\Controllers\Controller;
 
         //跨域
         header("Access-Control-Allow-origin:*");
-
+        echo '1';exit;
 
 
         $all = $request->all();
