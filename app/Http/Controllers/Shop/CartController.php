@@ -34,10 +34,15 @@ class CartController extends Controller
             'goods_img'=>$goods_img,
             'number'=>1
         ];
-        //根据gid 查询数据库
-        $res3 = CartModel::where($where)->first();
-        if($res){
-            //没加入购物车一次就更改购物车数量
+
+        $where2 = [
+            'goods_name'=>$goods_name
+        ];
+
+        //根据goods_name 查询数据库
+        $res3 = CartModel::where($where2)->first();
+        if($res3){
+            //购物车中有数据
             $number = $res3['number'];
             $number = $number + 1;
 
@@ -52,14 +57,6 @@ class CartController extends Controller
             $res = CartModel::insert($data);
             var_dump($res);
         }
-
-
-
-
-
-
-
-
 
     }
 }
