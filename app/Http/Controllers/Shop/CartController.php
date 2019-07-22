@@ -51,6 +51,11 @@ class CartController extends Controller
             //加入购物车
             $res4 = CartModel::insert($data);
         }
+        if($res4){
+            echo '1';exit;
+        }else{
+            echo '2';exit;
+        }
 
     }
 }
