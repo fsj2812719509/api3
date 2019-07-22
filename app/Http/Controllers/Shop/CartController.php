@@ -29,6 +29,7 @@ class CartController extends Controller
         $goods_img = $res['goods_img'];
 
         $data = [
+            'gid'=>$gid,
             'goods_name'=>$goods_name,
             'self_price'=>$self_price,
             'goods_img'=>$goods_img,
@@ -46,11 +47,9 @@ class CartController extends Controller
             $number = $res3['number'];
             $number2 = $number + 1;
             $res4 = CartModel::where($where)->update(['number'=>$number2]);
-            var_dump($res4);
         }else{
             //加入购物车
             $res4 = CartModel::insert($data);
-            var_dump($res);
         }
 
     }
