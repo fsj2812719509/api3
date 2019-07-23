@@ -37,3 +37,8 @@ Route::resource('/ShopLoginApi','Shop\LoginApiController',['except'=>['create','
 
 
 
+//app pc登录
+Route::resource('/TwoLogin','TwoLoginApiController',['except'=>['create','edit']]);//登录接口
+
+
+

@@ -8,12 +8,25 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="/login" method="post">
-        姓名 : <input type="text" id="username" name="username">
-        <br><br>
-        密码 : <input type="password" id="password" name="password">
-        <br><br>
-        <input type="submit" value="登录">
-    </form>
+    <table>
+        <tr>
+            <td>用户名</td>
+            <td>电话</td>
+            <td>邮箱</td>
+            <td>状态</td>
+        </tr>
+        @foreach($data as $k=>$v)
+            <tr>
+                <td>{{$v['username']}}</td>
+                <td>{{$v['type']}}</td>
+                <td>{{$v['email']}}</td>
+                @if($v['type']==1)
+                    <td>在线</td>
+                @elseif($v['type']!=1)
+                    <td>不在线</td>
+                @endif
+            </tr>
+        @endforeach
+    </table>
 </body>
 </html>

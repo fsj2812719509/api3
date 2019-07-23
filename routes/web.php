@@ -36,3 +36,18 @@ Route::post('/particulars','Shop\ParticularsController@particulars');//商品详
 Route::post('/cartDo','Shop\CartController@cartDo');//加入购物车
 
 Route::get('/cart','Shop\CartController@cart');//加入购物车
+
+
+
+
+//测试
+Route::get('/AppLoginList','TwoLoginController@AppLoginList');//app端页面
+Route::get('/PCLoginList','TwoLoginController@PCLoginList');//PC端页面
+Route::post('/AppLogin','TwoLoginController@AppLogin');//App登录
+Route::post('/PCLogin','TwoLoginController@PCLogin');//App登录
+Route::get('/LoginList','TwoLoginController@LoginList');//App登录
+
+
+
+
+Route::get('/TwoLogin','TwoLoginController@TwoLogin');//App登录
